@@ -63,9 +63,9 @@ const Contact = () => {
             </section>
             <section className="flex flex-col items-center mt-5 space-y-4">
                 <div className="text-customWhite flex gap-3 text-7xl">
-                    <i className="devicon-github-original hover:scale-125 transition-transform"></i>
-                    <i className="devicon-linkedin-plain hover:scale-125 transition-transform"></i>
-                    <i className="devicon-facebook-plain hover:scale-125 transition-transform"></i>
+                    <a href="https://github.com/julsCadenas"><i className="devicon-github-original hover:scale-125 transition-transform"></i></a>
+                    <a href="https://www.linkedin.com/in/julian-cadenas/"><i className="devicon-linkedin-plain hover:scale-125 transition-transform"></i></a>
+                    <a href="https://www.facebook.com/jscdns/"><i className="devicon-facebook-plain hover:scale-125 transition-transform"></i></a>
                 </div>
                 <a href={resume} download='Julian-Sebastian-Cadenas-Resume.pdf'>
                     <Amongus />
