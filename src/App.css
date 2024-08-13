@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #F3F4E5 #1e1e1e; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* From Uiverse.io by barisdogansutcu */ 
+button {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 0 10px !important;
+    color: white !important;
+    text-shadow: 2px 2px rgb(116, 116, 116) !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    border: solid 2px black !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    font-size: 17px !important;
+    background-color: hsl(49deg 98% 60%) !important;
+    border-radius: 50px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    -webkit-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+}
+
+button:active {
+    -webkit-transform: scale(0.9) !important;
+    -ms-transform: scale(0.9) !important;
+    transform: scale(0.9) !important;
+    -webkit-transition: all 100ms ease !important;
+    transition: all 100ms ease !important;
+}
+
+button svg {
+    -webkit-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+    z-index: 2 !important;
+}
+
+.play {
+    -webkit-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+    -webkit-transition-delay: 300ms !important;
+    transition-delay: 300ms !important;
+}
+
+button:hover svg {
+    -webkit-transform: scale(3) translate(50%) !important;
+    -ms-transform: scale(3) translate(50%) !important;
+    transform: scale(3) translate(50%) !important;
+}
+
+.now {
+    position: absolute !important;
+    left: 0 !important;
+    -webkit-transform: translateX(-100%) !important;
+    -ms-transform: translateX(-100%) !important;
+    transform: translateX(-100%) !important;
+    -webkit-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+    z-index: 2 !important;
+}
+
+button:hover .now {
+    -webkit-transform: translateX(10px) !important;
+    -ms-transform: translateX(10px) !important;
+    transform: translateX(10px) !important;
+    -webkit-transition-delay: 300ms !important;
+    transition-delay: 300ms !important;
+}
+
+button:hover .play {
+    -webkit-transform: translateX(200%) !important;
+    -ms-transform: translateX(200%) !important;
+    transform: translateX(200%) !important;
+    -webkit-transition-delay: 300ms !important;
+    transition-delay: 300ms !important;
+}
+
+  
