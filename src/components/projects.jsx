@@ -76,12 +76,12 @@ const Projects = () => {
                             <p className='text-3xl font-semibold text-customWhite'>{project.title}</p>
                             <section className='text-lg opacity-0 group-hover:opacity-100 transition-opacity flex flex-row mt-2'>
                                 <a href={project.repoLink} className='hover:text-customGray transition-colors pr-3 flex items-center gap-2' >
-                                    <i class="devicon-github-original text-2xl"></i>
+                                    <i className="devicon-github-original text-2xl"></i>
                                     Source Code
                                 </a>
                                 { project.link &&
                                 <a href={project.link} className='hover:text-customGray transition-colors border-l-2 pl-3 flex items-center gap-2' >
-                                    <span class="material-symbols-outlined">open_in_new</span>
+                                    <span className="material-symbols-outlined">open_in_new</span>
                                     Open Website
                                 </a>
                                 }

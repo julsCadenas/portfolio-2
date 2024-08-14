@@ -51,25 +51,36 @@ const Contact = () => {
         startAnimation();
         copyEmailToClipboard();
     };
+    
     return (
-        <footer className="text-customWhite bg-black flex flex-col justify-center items-center py-32" id="contact">
-            <section className='flex flex-col px-10'>
+        <footer className="text-customWhite bg-black flex flex-col md:flex-row justify-center py-10 border-t-[1px] border-customGray pl-5 md:pl-0" id="contact">
+            <section className='flex flex-col px-5 md:px-10 text-left'>
                 <p className='font-bold text-2xl md:text-3xl'>Contact Me:</p>
-                <p className='font-medium text-xl md:text-2xl text-customGray'>You can contact me using 
-                <BootstrapTooltip title="Click to copy">
-                    <span className="cursor-pointer hover:text-customWhite transition-colors" onClick={handleNameClick}><strong> {displayText || originalText}</strong></span>
-                </BootstrapTooltip>
+                <p className='font-medium text-xl md:text-2xl text-customGray mt-3 md:mt-0'>
+                    You can contact me using 
+                    <BootstrapTooltip title="Click to copy">
+                        <span className="cursor-pointer hover:text-customWhite transition-colors ml-1" onClick={handleNameClick}><strong>{displayText || originalText}</strong></span>
+                    </BootstrapTooltip>
                 </p>
-            </section>
-            <section className="flex flex-col items-center mt-5 space-y-4">
-                <div className="text-customWhite flex gap-3 text-7xl">
-                    <a title="my github" className="hover:scale-125 transition-transform" href="https://github.com/julsCadenas"><i className="devicon-github-original "></i></a>
-                    <a title="my linkedin" className="hover:scale-125 transition-transform" href="https://www.linkedin.com/in/julian-cadenas/"><i className="devicon-linkedin-plain "></i></a>
-                    <a title="my facebook" className="hover:scale-125 transition-transform" href="https://www.facebook.com/jscdns/"><i className="devicon-facebook-plain "></i></a>
-                </div>
-                <a href={resume} download='Julian-Sebastian-Cadenas-Resume.pdf'>
+                <a href={resume} download='Julian-Sebastian-Cadenas-Resume.pdf' className="mt-1">
                     <Amongus />
                 </a>
+            </section>
+            <section className="flex flex-col mt-8 md:mt-0 md:ml-10 space-y-4 pl-5 md:pl-0">
+                <div className="text-customGray flex flex-col gap-3 text-xl">
+                    <a title="my github" className="hover:text-customWhite transition-colors flex items-center" href="https://github.com/julsCadenas">
+                        <i className="devicon-github-original text-2xl"></i> 
+                        <span className="ml-2">Github</span>
+                    </a>
+                    <a title="my linkedin" className="hover:text-customWhite transition-colors flex items-center" href="https://www.linkedin.com/in/julian-cadenas/">
+                        <i className="devicon-linkedin-plain text-2xl"></i> 
+                        <span className="ml-2">LinkedIn</span>
+                    </a>
+                    <a title="my facebook" className="hover:text-customWhite transition-colors flex items-center" href="https://www.facebook.com/jscdns/">
+                        <i className="devicon-facebook-plain text-2xl"></i> 
+                        <span className="ml-2">Facebook</span>
+                    </a>
+                </div>
             </section>
         </footer>
     );
