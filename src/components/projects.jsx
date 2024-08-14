@@ -63,7 +63,7 @@ const Projects = () => {
                 <p className='font-bold text-2xl md:text-3xl'>Projects</p>
                 <p className='font-medium text-lg md:text-xl text-customGray'>The projects I've done throughout my journey</p>
             </section>
-            <section className="flex justify-center items-center max-w-7xl flex-wrap gap-2 md:gap-3 mt-8">
+            <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
                 {projects.map((project, index) => (
                     <article key={index} className='relative border-[1px] border-customGray rounded-xl group'>
                         <div className='relative'>

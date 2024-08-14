@@ -56,13 +56,13 @@ const Contact = () => {
         <footer className="text-customWhite bg-black flex flex-col md:flex-row justify-center py-10 border-t-[1px] border-customGray pl-5 md:pl-0" id="contact">
             <section className='flex flex-col px-5 md:px-10 text-left'>
                 <p className='font-bold text-2xl md:text-3xl'>Contact Me:</p>
-                <p className='font-medium text-xl md:text-2xl text-customGray mt-3 md:mt-0'>
+                <p className='font-medium text-lg md:text-2xl text-customGray'>
                     You can contact me using 
                     <BootstrapTooltip title="Click to copy">
                         <span className="cursor-pointer hover:text-customWhite transition-colors ml-1" onClick={handleNameClick}><strong>{displayText || originalText}</strong></span>
                     </BootstrapTooltip>
                 </p>
-                <a href={resume} download='Julian-Sebastian-Cadenas-Resume.pdf' className="mt-1">
+                <a href={resume} download='Julian-Sebastian-Cadenas-Resume.pdf' className="mt-1 w-[147px]">
                     <Amongus />
                 </a>
             </section>
