@@ -74,10 +74,16 @@ const Projects = () => {
                         </div>
                         <aside className='absolute top-0 left-0 right-0 p-4 rounded-t-xl'>
                             <p className='text-3xl font-semibold text-customWhite'>{project.title}</p>
-                            <section className='text-lg opacity-0 group-hover:opacity-100 transition-opacity flex flex-col mt-1'>
-                                <a href={project.repoLink} className='hover:text-customGray transition-colors' >Source Code</a>
+                            <section className='text-lg opacity-0 group-hover:opacity-100 transition-opacity flex flex-row mt-2'>
+                                <a href={project.repoLink} className='hover:text-customGray transition-colors pr-3 flex items-center gap-2' >
+                                    <i class="devicon-github-original text-2xl"></i>
+                                    Source Code
+                                </a>
                                 { project.link &&
-                                <a href={project.link} className='hover:text-customGray transition-colors' >Open Website</a>
+                                <a href={project.link} className='hover:text-customGray transition-colors border-l-2 pl-3 flex items-center gap-2' >
+                                    <span class="material-symbols-outlined">open_in_new</span>
+                                    Open Website
+                                </a>
                                 }
                             </section>
                         </aside>
