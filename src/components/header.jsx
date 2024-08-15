@@ -24,7 +24,7 @@ const Header = () => {
         
         <header className="fixed top-2 left-5 right-5 md:left-20 md:right-20 bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg p-3 px-5 rounded-xl z-50">
             <nav className={`font-Montserrat text-customWhite font-medium flex items-center justify-between mx-auto `}>
-                <h1 className="text-3xl cursor-pointer hover:text-customGray transition-colors">
+                <h1 className="text-2xl md:text-3xl cursor-pointer hover:text-customGray transition-colors">
                     <a href="/home" onClick={(e) => scrollToSection('juls', e, 0)}>Julian Cadenas</a>
                 </h1>
                 <p
@@ -64,7 +64,7 @@ const Header = () => {
             >
                 <div className="flex flex-col h-full">
                     <div className="flex justify-between items-center p-3">
-                        <h1 className="text-3xl cursor-pointer font-medium hover:text-customGray transition-colors" onClick={(e) => scrollToSection('juls', e, 0)}>
+                        <h1 className="text-2xl md:text-3xl cursor-pointer font-medium hover:text-customGray transition-colors" onClick={(e) => scrollToSection('juls', e, 0)}>
                             Julian Cadenas
                         </h1>
                         <p onClick={toggleSidebar} className="text-customWhite focus:outline-none hover:text-customGray transition-colors px-3">
