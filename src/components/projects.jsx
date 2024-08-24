@@ -30,7 +30,7 @@ const projects = [
     },
     {
         title: 'iCARE Website',
-        repoLink: 'https://github.com/julsCadenas/iCARE-Website',
+        repoLink: 'https://github.com/julsCadenas/icare-mern',
         image: icare,
         alt: 'iCare'
     },
