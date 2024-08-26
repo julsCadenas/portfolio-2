@@ -28,7 +28,7 @@ const SkillsPrint = ({ title, description, icons }) => {
                 <p className='font-bold text-2xl md:text-3xl'>{title}</p>
                 <p className='font-medium text-lg md:text-xl text-customGray pt-1'>{description}</p>
             </section>
-            <section className="py-8 flex flex-wrap justify-center gap-5 text-5xl md:text-7xl px-5 transition-all">
+            <section className="py-8 flex flex-wrap items-center justify-start md:justify-center gap-5 text-5xl md:text-7xl px-10 md:px-5 transition-all">
                 {icons.map((skill, index) => (
                     <div 
                         key={index}
