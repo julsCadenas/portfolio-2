@@ -3,7 +3,7 @@ import myphoto from '../images/myphoto.jpg';
 const About = () => {
 
     const name = "I am Julian Sebastian Cadenas"
-    const bio = "I am currently pursuing a Bachelor's degree in Computer Engineering at FEU Tech, I am a driven individual with a passion for software development. As a Scholar, I maintain a specific GPA every trimester, showcasing my dedication to academic excellence.";
+    const bio = "I am currently pursuing a Bachelor's degree in Computer Engineering at FEU Tech, I am a driven individual with a passion for software development. As a Scholar, I maintain a specific GPA every trimester.";
 
     return (
         <main className='h-screen flex items-center justify-center bg-black' id='about'>
