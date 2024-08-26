@@ -8,6 +8,12 @@ import fitlib from '../images/fitlibrary.png';
 
 const projects = [
     {
+        title: 'iCARE Website',
+        repoLink: 'https://github.com/julsCadenas/icare-mern',
+        image: icare,
+        alt: 'iCare'
+    },
+    {
         title: 'Anime Finder',
         link: 'https://myanifinder.vercel.app/',
         repoLink: 'https://github.com/julsCadenas/anime-finder-2',
@@ -27,12 +33,6 @@ const projects = [
         repoLink: 'https://github.com/julsCadenas/ave-website',
         image: aaipsd,
         alt: 'Photography Portfolio'
-    },
-    {
-        title: 'iCARE Website',
-        repoLink: 'https://github.com/julsCadenas/icare-mern',
-        image: icare,
-        alt: 'iCare'
     },
     {
         title: 'LRT System',
