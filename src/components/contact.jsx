@@ -2,7 +2,7 @@ import Amongus from "../ui/amongus";
 import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
-import resume from '../files/Julian-Sebastian-Cadenas-Resume.pdf';
+import resume from '../assets/Julian-Sebastian-Cadenas-Resume.pdf';
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
