@@ -61,7 +61,7 @@ const Projects = () => {
         <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20" id='projects'>
             <section className='flex flex-col px-10'>
                 <p className='font-bold text-2xl md:text-3xl'>Projects</p>
-                <p className='font-medium text-lg md:text-xl text-customGray'>The projects I've done throughout my journey</p>
+                <p className='font-medium text-lg md:text-xl text-customGray'>A showcase of my works and the skills I've developed over time.</p>
             </section>
             <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
                 {projects.map((project, index) => (
