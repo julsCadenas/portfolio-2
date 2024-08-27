@@ -6,7 +6,7 @@ const About = () => {
     const bio = "I am currently pursuing a Bachelor's degree in Computer Engineering at FEU Tech, I am a driven individual with a passion for software development. As a Scholar, I maintain a specific GPA every trimester.";
 
     return (
-        <main className='h-screen flex items-center justify-center bg-black' id='about'>
+        <main className='h-auto flex items-center justify-center bg-black flex' id='about'>
             <section className='mx-3 md:mx-10 relative group overflow-hidden'>
                 <div className='relative'>
                     <img className='rounded-xl transition-all ease-in-out w-auto h-[900px] md:h-[1024px] object-cover' src={myphoto} alt="My Photo"/>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const About = () => {
+const Juls = () => {
     const [displayText, setDisplayText] = useState('');
     const originalText = "Hi, I'm Julian";
 
@@ -32,7 +32,7 @@ const About = () => {
     };
 
     return(
-        <main className="text-customWhite flex justify-center items-center flex-col pb-20 pt-36 md:pt-28 h-96" id='juls'>
+        <main className="text-customWhite flex justify-center items-center flex-col pb-20 pt-36 md:pt-28 h-96 " id='juls'>
             <section className="font-bold text-5xl md:text-7xl cursor-pointer hover:scale-110 transition-all"  onClick={handleReplayAnimation}>
                 <p>{displayText}</p>
             </section>
@@ -43,4 +43,4 @@ const About = () => {
     )
 };
 
-export default About;
+export default Juls;

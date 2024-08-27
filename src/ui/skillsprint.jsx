@@ -23,7 +23,7 @@ const SkillsPrint = ({ title, description, icons }) => {
 
   return (
     <main className="w-full flex justify-center">
-        <div className="w-full max-w-7xl">
+        <div className="w-full max-w-3xl">
             <section className='flex flex-col px-10 pt-5 text-left'>
                 <p className='font-bold text-2xl md:text-3xl'>{title}</p>
                 <p className='font-medium text-lg md:text-xl text-customGray pt-1'>{description}</p>
