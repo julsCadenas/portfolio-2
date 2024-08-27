@@ -9,6 +9,7 @@ import fitlib from '../images/fitlibrary.png';
 const projects = [
     {
         title: 'iCARE Website',
+        link: 'https://icare-unofficial.vercel.app/',
         repoLink: 'https://github.com/julsCadenas/icare-mern',
         image: icare,
         alt: 'iCare'
