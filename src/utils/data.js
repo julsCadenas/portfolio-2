@@ -81,7 +81,7 @@ const projects = [
         alt: 'Clock Extension',
         stack: ['HTMl', 'CSS', 'Javascript', 'OpenWeatherMap API'],
         subtitle: 'A minimalist clock homepage replacement',
-        description: "A website created as a replacement for chrome's startup or new tab page. This works as a Chrome extension."
+        description: "A website created as a replacement for a chromium browser's startup or new tab page. This works as a chromium extension."
     }
 ];
 
