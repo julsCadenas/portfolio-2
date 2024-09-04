@@ -68,15 +68,15 @@ const Contact = () => {
             </section>
             <section className="flex flex-col mt-8 md:mt-0 md:ml-10 space-y-4 pl-5 md:pl-0">
                 <div className="text-customGray flex flex-col gap-3 text-xl">
-                    <a title="my github" className="hover:text-customWhite transition-colors flex items-center" href="https://github.com/julsCadenas">
+                    <a title="my github" className="hover:text-customWhite transition-colors flex items-center" href="https://github.com/julsCadenas" target="_blank" rel="noreferrer">
                         <i className="devicon-github-original text-2xl"></i> 
                         <span className="ml-2">Github</span>
                     </a>
-                    <a title="my linkedin" className="hover:text-customWhite transition-colors flex items-center" href="https://www.linkedin.com/in/julian-cadenas/">
+                    <a title="my linkedin" className="hover:text-customWhite transition-colors flex items-center" href="https://www.linkedin.com/in/julian-cadenas/" target="_blank" rel="noreferrer">
                         <i className="devicon-linkedin-plain text-2xl"></i> 
                         <span className="ml-2">LinkedIn</span>
                     </a>
-                    <a title="my facebook" className="hover:text-customWhite transition-colors flex items-center" href="https://www.facebook.com/jscdns/">
+                    <a title="my facebook" className="hover:text-customWhite transition-colors flex items-center" href="https://www.facebook.com/jscdns/" target="_blank" rel="noreferrer">
                         <i className="devicon-facebook-plain text-2xl"></i> 
                         <span className="ml-2">Facebook</span>
                     </a>
