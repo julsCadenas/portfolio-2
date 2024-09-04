@@ -5,6 +5,7 @@ import lrt from '../images/lrt.png';
 import anifind from '../images/anifind.png';
 import clock from '../images/clock.png';
 import fitlib from '../images/fitlibrary.png';
+import React, { useRef, useEffect } from 'react';
 
 const projects = [
     {
@@ -56,17 +57,44 @@ const projects = [
     }
 ];
 
-
 const Projects = () => {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const handleIntersection = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+
+        if (ref.current) {
+            const elements = ref.current.querySelectorAll('.header-wrapper, .description-wrapper, .project-card');
+            elements.forEach(element => observer.observe(element));
+        }
+
+        return () => {
+            if (ref.current) {
+                const elements = ref.current.querySelectorAll('.header-wrapper, .description-wrapper, .project-card');
+                elements.forEach(element => observer.unobserve(element));
+            }
+        };
+    }, []);
+
     return (
-        <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20" id='projects'>
+        <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20" id='projects' ref={ref}>
             <section className='flex flex-col px-10'>
-                <p className='font-bold text-2xl md:text-3xl'>Projects</p>
-                <p className='font-medium text-lg md:text-xl text-customGray'>A showcase of my works and the skills I've developed over time.</p>
+                <p className='font-bold text-2xl md:text-3xl header-wrapper'>Projects</p>
+                <p className='font-medium text-lg md:text-xl text-customGray description-wrapper'>A showcase of my works and the skills I've developed over time.</p>
             </section>
             <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
                 {projects.map((project, index) => (
-                    <article key={index} className='relative border-[1px] border-customGray rounded-xl group'>
+                    <article key={index} className='relative border-[1px] border-customGray rounded-xl group project-card'>
                         <div className='relative'>
                             <img className='object-cover w-96 h-[450px] rounded-xl' src={project.image} alt={project.alt} />
                             <div className='absolute inset-0'>
@@ -74,14 +102,16 @@ const Projects = () => {
                             </div>
                         </div>
                         <aside className='absolute top-0 left-0 right-0 p-4 rounded-t-xl'>
-                            <p className='text-3xl font-semibold text-customWhite'>{project.title}</p>
+                            <div className='title-wrapper'>
+                                <p className='text-3xl font-semibold text-customWhite'>{project.title}</p>
+                            </div>
                             <section className='text-lg opacity-0 group-hover:opacity-100 transition-opacity flex flex-row mt-2'>
-                                <a href={project.repoLink} className='hover:text-customGray transition-colors pr-3 flex items-center gap-2' >
+                                <a href={project.repoLink} className='hover:text-customGray transition-colors pr-3 flex items-center gap-2'>
                                     <i className="devicon-github-original text-2xl"></i>
                                     Source Code
                                 </a>
                                 { project.link &&
-                                <a href={project.link} className='hover:text-customGray transition-colors border-l-2 pl-3 flex items-center gap-2' >
+                                <a href={project.link} className='hover:text-customGray transition-colors border-l-2 pl-3 flex items-center gap-2'>
                                     <span className="material-symbols-outlined">open_in_new</span>
                                     Open Website
                                 </a>
@@ -93,6 +123,6 @@ const Projects = () => {
             </section>
         </main>
     );
-}
+};
 
 export default Projects;
