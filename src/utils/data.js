@@ -14,7 +14,7 @@ const projects = [
         repoLink: 'https://github.com/julsCadenas/icare-mern',
         image: icare,
         alt: 'iCare',
-        stack: ['MongoDB', 'Express', 'React', 'NodeJS', 'Tailwind'],
+        stack: ['MongoDB', 'Express', 'React', 'NodeJS', 'Tailwind', 'Axios'],
         subtitle: 'Unofficial iCare Website',
         description: 'The unofficial iCARE Website, originally developed in PHP as a final project for Data Structures & Algorithms. I completely rewrote using the MERN stack. The frontend is written in React.js and styled using Tailwind CSS, while the backend is powered by MongoDB, Express, and Node.js. The web application allows students students to book consultations and tutorials with professors.'
     },
@@ -25,7 +25,7 @@ const projects = [
         repoLink: 'https://github.com/julsCadenas/anime-finder-2',
         image: anifind,
         alt: 'Anime Finder',
-        stack: ['React', 'Tailwind', 'Jikan API'],
+        stack: ['React', 'Tailwind', 'Jikan API', 'Axios'],
         subtitle: 'Find your favorite anime!',
         description: 'The Anime Finder is a web application designed to help anime fans in discovering their next favorite series or movie. Leveraging React.js and Tailwind CSS, this project offers an intuitive user interface where users can explore a vast database of anime content. The core functionality of the Anime Finder is powered by the Jikan API, allowing data retrieval for up-to-date information on anime titles, genres, ratings, and more.'
     },
