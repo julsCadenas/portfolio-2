@@ -1,22 +1,17 @@
 import './styles/App.css'
-import Header from './components/header'
-import Juls from './components/juls'
-import About from './components/about'
-import Skills from './components/skills'
-import Projects from './components/projects'
-import Contact from './components/contact'
+import Index from './pages'
+import SpecificProj from './pages/specificproj';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
   return (
-    <main className='bg-black h-screen font-poppins'>
-      <Header />
-      <Juls />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <Router>
+        <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/project/:title" element={<SpecificProj />} />
+        </Routes>
+    </Router>
   )
 }
 

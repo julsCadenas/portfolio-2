@@ -1,61 +1,6 @@
-import gwacalc from '../images/gwacalc.png';
-import aaipsd from '../images/aaipsd.png';
-import icare from '../images/icare.png';
-import lrt from '../images/lrt.png'; 
-import anifind from '../images/anifind.png';
-import clock from '../images/clock.png';
-import fitlib from '../images/fitlibrary.png';
 import React, { useRef, useEffect } from 'react';
-
-const projects = [
-    {
-        title: 'iCARE Website',
-        link: 'https://icare-unofficial.vercel.app/',
-        repoLink: 'https://github.com/julsCadenas/icare-mern',
-        image: icare,
-        alt: 'iCare'
-    },
-    {
-        title: 'Anime Finder',
-        link: 'https://myanifinder.vercel.app/',
-        repoLink: 'https://github.com/julsCadenas/anime-finder-2',
-        image: anifind,
-        alt: 'Anime Finder'
-    },
-    {
-        title: 'FEU Tech Library',
-        link: 'https://fitlib-e38fb.web.app/',
-        repoLink: 'https://github.com/julsCadenas/fitlib',
-        image: fitlib,
-        alt: 'FEU Tech Library'
-    },
-    {
-        title: 'Photography Portfolio',
-        link: 'https://aai-psd.vercel.app/',
-        repoLink: 'https://github.com/julsCadenas/ave-website',
-        image: aaipsd,
-        alt: 'Photography Portfolio'
-    },
-    {
-        title: 'LRT System',
-        repoLink: 'https://github.com/julsCadenas/lrtProject',
-        image: lrt,
-        alt: 'LRT System'
-    },
-    {
-        title: 'GWA-Calculator',
-        link: 'https://julscadenas.github.io/gwa-calculator/',
-        repoLink: 'https://github.com/julsCadenas/gwa-calculator',
-        image: gwacalc,
-        alt: 'GWA Calculator'
-    },
-    {
-        title: 'Clock Extension',
-        repoLink: 'https://github.com/julsCadenas/clockhome',
-        image: clock,
-        alt: 'Clock Extension'
-    }
-];
+import { Link } from 'react-router-dom';
+import projects from '../utils/data.js';
 
 const Projects = () => {
     const ref = useRef(null);
@@ -87,14 +32,14 @@ const Projects = () => {
     }, []);
 
     return (
-        <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20" id='projects' ref={ref}>
+        <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20 cursor-pointer" id='projects' ref={ref}>
             <section className='flex flex-col px-10'>
                 <p className='font-bold text-2xl md:text-3xl header-wrapper'>Projects</p>
                 <p className='font-medium text-lg md:text-xl text-customGray description-wrapper'>A showcase of my works and the skills I've developed over time.</p>
             </section>
             <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
                 {projects.map((project, index) => (
-                    <article key={index} className='relative border-[1px] border-customGray rounded-xl group project-card'>
+                    <Link to={`/project/${project.title}`} key={index} className='relative border-[1px] border-customGray rounded-xl group project-card'>
                         <div className='relative'>
                             <img className='object-cover w-96 h-[450px] rounded-xl' src={project.image} alt={project.alt} />
                             <div className='absolute inset-0'>
@@ -106,19 +51,13 @@ const Projects = () => {
                                 <p className='text-3xl font-semibold text-customWhite'>{project.title}</p>
                             </div>
                             <section className='text-lg opacity-0 group-hover:opacity-100 transition-opacity flex flex-row mt-2'>
-                                <a href={project.repoLink} className='hover:text-customGray transition-colors pr-3 flex items-center gap-2'>
-                                    <i className="devicon-github-original text-2xl"></i>
-                                    Source Code
-                                </a>
-                                { project.link &&
-                                <a href={project.link} className='hover:text-customGray transition-colors border-l-2 pl-3 flex items-center gap-2'>
+                                <div  className='hover:text-customGray transition-colors pr-3 flex items-center gap-2'>
                                     <span className="material-symbols-outlined">open_in_new</span>
-                                    Open Website
-                                </a>
-                                }
+                                    Open Project
+                                </div>
                             </section>
                         </aside>
-                    </article>
+                    </Link>
                 ))}
             </section>
         </main>
