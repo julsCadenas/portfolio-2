@@ -2,11 +2,10 @@ import React, { useRef, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import projects from '../utils/data';
 import Header from '../components/header';
-import Contact from '../components/contact';
 
 const SpecificProj = () => {
-    const { title } = useParams();
-    const project = projects.find(p => p.title === title);
+    const { id } = useParams();
+    const project = projects.find(p => p.id === id );
     const ref = useRef(null);
 
     useEffect(() => {

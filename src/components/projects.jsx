@@ -39,7 +39,7 @@ const Projects = () => {
             </section>
             <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
                 {projects.map((project, index) => (
-                    <Link to={`/project/${project.title}`} key={index} className='relative border-[1px] border-customGray rounded-xl group project-card'>
+                    <Link to={`/project/${project.id}`} key={index} className='relative border-[1px] border-customGray rounded-xl group project-card'>
                         <div className='relative'>
                             <img className='object-cover w-96 h-[450px] rounded-xl' src={project.image} alt={project.alt} />
                             <div className='absolute inset-0'>
