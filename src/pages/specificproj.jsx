@@ -46,7 +46,7 @@ const SpecificProj = () => {
 
             <section className='flex justify-center flex-col min-h-screen gap-5 max-w-5xl px-10 md:px-20 2xl:px-10 pt-24 py-20'>
                 
-                <section className='border-b border-customGray pb-2 md:pb-3'>
+                <section className='border-b border-customGray pb-2 md:pb-3 flex flex-col gap-1'>
                     <p className='font-semibold text-5xl fade-in'>{project.title}</p>
                     <p className='text-customGray text-base font-semibold fade-in'>{project.subtitle}</p>
                 </section>
