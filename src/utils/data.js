@@ -36,7 +36,7 @@ const projects = [
         repoLink: 'https://github.com/julsCadenas/fitlib',
         image: fitlib,
         alt: 'FEU Tech Library',
-        stack: ['React', 'Tailwind', 'Firebase'],
+        stack: ['React', 'Firebase'],
         subtitle: 'Unofficial FEU Tech Library',
         description: 'A responsive website made using React.js and Firebase for as a final requirement in our Software Design course. This platform is designed to allow students to reserve or borrow books in advance before going to the library, and also to access books provided by FEU Tech in one centralized web application.'
     },
