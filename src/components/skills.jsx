@@ -17,6 +17,7 @@ const frameworkIcons = [
     { title: 'Express JS', iconClass: 'devicon-express-original', coloredIconClass: 'devicon-express-original colored' },
     { title: 'Tailwind', iconClass: 'devicon-tailwindcss-original', coloredIconClass: 'devicon-tailwindcss-original colored' },
     { title: 'Tensorflow', iconClass: 'devicon-tensorflow-original', coloredIconClass: 'devicon-tensorflow-original colored' },
+    { title: 'OpenCV', iconClass: 'devicon-opencv-plain', coloredIconClass: 'devicon-opencv-plain colored' },
     { title: 'Arduino', iconClass: 'devicon-arduino-plain', coloredIconClass: 'devicon-arduino-plain colored' },
 ];
 
