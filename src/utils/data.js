@@ -5,6 +5,7 @@ import lrt from '../images/lrt.png';
 import anifind from '../images/anifind.png';
 import clock from '../images/clock.png';
 import fitlib from '../images/fitlibrary.png';
+import nootnote from '../images/nootnote.png';
 
 const projects = [
     {
@@ -82,6 +83,17 @@ const projects = [
         stack: ['HTMl', 'CSS', 'Javascript', 'OpenWeatherMap API'],
         subtitle: 'A minimalist clock homepage replacement',
         description: "A website created as a replacement for a chromium browser's startup or new tab page. This works as a chromium extension."
+    },
+    {
+        id: '8',
+        title: 'Noot Note',
+        link: 'https://nootnoot.vercel.app/',
+        repoLink: 'https://github.com/julsCadenas/petco',
+        image: nootnote,
+        alt: 'Noot Note',
+        stack: ['React', 'Tailwind' ,'Vercel'],
+        subtitle: 'A note sharing community',
+        description: "This is Noot Note's landing page, the 2nd place winner for the 2024 Hooked Unitour Hackathon. Noot Note is a collaborative note-sharing platform that boosts leaming through peer reviews, discussions, and A1-generated quizzes. Users earn experience points for their virtual pets by engaging in these activities. Noot Note offers an interactive and immersive educational experience, fostering a dynamic and supportive learning community."
     }
 ];
 
