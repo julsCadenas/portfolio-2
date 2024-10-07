@@ -6,6 +6,7 @@ import anifind from '../images/anifind.png';
 import clock from '../images/clock.png';
 import fitlib from '../images/fitlibrary.png';
 import nootnote from '../images/nootnote.png';
+import floody from '../images/floody.png';
 
 const projects = [
     {
@@ -94,6 +95,16 @@ const projects = [
         stack: ['React', 'Tailwind' ,'Vercel'],
         subtitle: 'A note sharing community',
         description: "This is Noot Note's landing page, the 2nd place winner for the 2024 Hooked Unitour Hackathon. Noot Note is a collaborative note-sharing platform that boosts leaming through peer reviews, discussions, and A1-generated quizzes. Users earn experience points for their virtual pets by engaging in these activities. Noot Note offers an interactive and immersive educational experience, fostering a dynamic and supportive learning community."
+    },
+    {
+        id: '9',
+        title: 'Floody',
+        link: 'https://floody.vercel.app/',
+        image: floody,
+        alt: 'Floody',
+        stack: ['React', 'Tailwind' ,'Vercel', 'OpenWeatherMap API', 'Google Maps API'],
+        subtitle: 'Predict. Prepare. Protect',
+        description: "This is Floody, our entry to the 2024 NASA Space Apps Challenge. Floody is a cutting-edge solution that seamlessly integrates two powerful technologies: a sophisticated web-based 3D flood simulation platform and Floodlet, our innovative IoT early warning device. At its core, Floody harnesses the power of real-time meteorological data, advanced predictive algorithms, and smart sensor networks to not only visualize potential flood scenarios but also provide crucial early warnings in typhoon-prone regions like the Philippines. Our system transforms complex environmental data into clear, actionable insights, enabling communities, local governments, and NGOs to understand and prepare for flood risks with unprecedented precision. In an era where climate change threatens vulnerable communities more than ever, Floody stands as a beacon of hope - shifting flood management from reactive to proactive, bridging the gap between advanced technology and community resilience, and most importantly, protecting lives and livelihoods before disaster strikes. This isn't just another technology solution; it's a lifeline for communities on the front lines of climate change."    
     }
 ];
 
