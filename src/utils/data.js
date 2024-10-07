@@ -56,37 +56,6 @@ const projects = [
     },
     {
         id: '5',
-        title: 'LRT System',
-        repoLink: 'https://github.com/julsCadenas/lrtProject',
-        image: lrt,
-        alt: 'LRT System',
-        stack: ['Python', 'SQLite', 'CustomTkinter'],
-        subtitle: "Emulating LRT's ticket vending machine",
-        description: `A project I created to challenge myself in creating an application using Python and SQLite. During my sophomore year in college, we were tasked with creating a program that calculates LRT-2's fare matrix. Since then, I promised myself that I would one day code an application to simulate LRT-2's ticket vending machine. This project uses Python's Custom Tkinter library to build its modern and minimalistic GUI. Custom Tkinter enhances the standard Tkinter library, enabling users to create more modern-looking UIs. The project uses SQLite for its database, with Python utilized to manipulate the data.`
-    },
-    {
-        id: '6',
-        title: 'GWA-Calculator',
-        link: 'https://julscadenas.github.io/gwa-calculator/',
-        repoLink: 'https://github.com/julsCadenas/gwa-calculator',
-        image: gwacalc,
-        alt: 'GWA Calculator',
-        stack: ['HTMl', 'CSS', 'Javascript', 'JQuery'],
-        subtitle: 'Calculate your weighted GWA',
-        description: 'The GWA Calculator is a simple web application designed to help students compute their General Weighted Average (GWA). This project provides an interface where users can input their grades and the corresponding units for each subject, and then calculate their GWA.'
-    },
-    {
-        id: '7',
-        title: 'Clock Extension',
-        repoLink: 'https://github.com/julsCadenas/clockhome',
-        image: clock,
-        alt: 'Clock Extension',
-        stack: ['HTMl', 'CSS', 'Javascript', 'OpenWeatherMap API'],
-        subtitle: 'A minimalist clock homepage replacement',
-        description: "A website created as a replacement for a chromium browser's startup or new tab page. This works as a chromium extension."
-    },
-    {
-        id: '8',
         title: 'Noot Note',
         link: 'https://nootnoot.vercel.app/',
         repoLink: 'https://github.com/julsCadenas/petco',
@@ -97,7 +66,7 @@ const projects = [
         description: "This is Noot Note's landing page, the 2nd place winner for the 2024 Hooked Unitour Hackathon. Noot Note is a collaborative note-sharing platform that boosts leaming through peer reviews, discussions, and A1-generated quizzes. Users earn experience points for their virtual pets by engaging in these activities. Noot Note offers an interactive and immersive educational experience, fostering a dynamic and supportive learning community."
     },
     {
-        id: '9',
+        id: '6',
         title: 'Floody',
         link: 'https://floody.vercel.app/',
         image: floody,
@@ -105,6 +74,37 @@ const projects = [
         stack: ['React', 'Tailwind' ,'Vercel', 'OpenWeatherMap API', 'Google Maps API'],
         subtitle: 'Predict. Prepare. Protect',
         description: "This is Floody, our entry to the 2024 NASA Space Apps Challenge. Floody is a cutting-edge solution that seamlessly integrates two powerful technologies: a sophisticated web-based 3D flood simulation platform and Floodlet, our innovative IoT early warning device. At its core, Floody harnesses the power of real-time meteorological data, advanced predictive algorithms, and smart sensor networks to not only visualize potential flood scenarios but also provide crucial early warnings in typhoon-prone regions like the Philippines. Our system transforms complex environmental data into clear, actionable insights, enabling communities, local governments, and NGOs to understand and prepare for flood risks with unprecedented precision. In an era where climate change threatens vulnerable communities more than ever, Floody stands as a beacon of hope - shifting flood management from reactive to proactive, bridging the gap between advanced technology and community resilience, and most importantly, protecting lives and livelihoods before disaster strikes. This isn't just another technology solution; it's a lifeline for communities on the front lines of climate change."    
+    },
+    {
+        id: '7',
+        title: 'LRT System',
+        repoLink: 'https://github.com/julsCadenas/lrtProject',
+        image: lrt,
+        alt: 'LRT System',
+        stack: ['Python', 'SQLite', 'CustomTkinter'],
+        subtitle: "Emulating LRT's ticket vending machine",
+        description: `A project I created to challenge myself in creating an application using Python and SQLite. During my sophomore year in college, we were tasked with creating a program that calculates LRT-2's fare matrix. Since then, I promised myself that I would one day code an application to simulate LRT-2's ticket vending machine. This project uses Python's Custom Tkinter library to build its modern and minimalistic GUI. Custom Tkinter enhances the standard Tkinter library, enabling users to create more modern-looking UIs. The project uses SQLite for its database, with Python utilized to manipulate the data.`
+    },
+    {
+        id: '8',
+        title: 'GWA-Calculator',
+        link: 'https://julscadenas.github.io/gwa-calculator/',
+        repoLink: 'https://github.com/julsCadenas/gwa-calculator',
+        image: gwacalc,
+        alt: 'GWA Calculator',
+        stack: ['HTMl', 'CSS', 'Javascript', 'JQuery'],
+        subtitle: 'Calculate your weighted GWA',
+        description: 'The GWA Calculator is a simple web application designed to help students compute their General Weighted Average (GWA). This project provides an interface where users can input their grades and the corresponding units for each subject, and then calculate their GWA.'
+    },
+    {
+        id: '9',
+        title: 'Clock Extension',
+        repoLink: 'https://github.com/julsCadenas/clockhome',
+        image: clock,
+        alt: 'Clock Extension',
+        stack: ['HTMl', 'CSS', 'Javascript', 'OpenWeatherMap API'],
+        subtitle: 'A minimalist clock homepage replacement',
+        description: "A website created as a replacement for a chromium browser's startup or new tab page. This works as a chromium extension."
     }
 ];
 
