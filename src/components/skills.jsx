@@ -8,7 +8,7 @@ const skillIcons = [
     { title: 'C++', iconClass: 'devicon-cplusplus-plain', coloredIconClass: 'devicon-cplusplus-plain colored' },
     { title: 'HTML5', iconClass: 'devicon-html5-plain', coloredIconClass: 'devicon-html5-plain colored' },
     { title: 'CSS3', iconClass: 'devicon-css3-plain', coloredIconClass: 'devicon-css3-plain colored' },
-    // { title: 'PHP', iconClass: 'devicon-php-plain', coloredIconClass: 'devicon-php-plain colored' },
+    { title: 'PHP', iconClass: 'devicon-php-plain', coloredIconClass: 'devicon-php-plain colored' },
 ];
 
 const frameworkIcons = [
