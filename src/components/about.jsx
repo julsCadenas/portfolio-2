@@ -13,12 +13,12 @@ const About = () => {
     const bio = "I am currently pursuing a Bachelor's degree in Computer Engineering at FEU Tech, I am a driven individual with a passion for software development. As a Scholar, I maintain a specific GPA every trimester.";
 
     return (
-        <motion.div
+        <div
             className='h-auto flex items-center justify-center bg-black' 
             id='about'
-            initial="hidden"
-            animate="visible"  
-            variants={fadeInUp}
+            // initial="hidden"
+            // animate="visible"  
+            // variants={fadeInUp}
         >
             <section className='mx-3 md:mx-10 relative group overflow-hidden'>
                 <div className='relative'>
@@ -40,7 +40,7 @@ const About = () => {
                     </Link> */}
                 </article>
             </section>
-        </motion.div>
+        </div>
         // <main className='h-auto flex items-center justify-center bg-black' id='about'>
         // </main>
     );

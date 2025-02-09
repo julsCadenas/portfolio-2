@@ -47,22 +47,26 @@ const Me = () => {
           </section>
 
           <section className='flex flex-col gap-3 text-justify leading-7'>
-            <div>
-              <p>Hi! I'm an aspiring software developer from FEU Institute of Technology. 
-                I am learning <strong>React</strong> for frontend development, <strong>NodeJS</strong> and <strong>ExpressJS</strong> for backend development.
+            <div className='flex flex-col gap-2'>
+              <p>
+                Hi! I'm an aspiring <strong>software or ML engineer</strong> from FEU Institute of Technology! 
+                Currently, I work as a <strong>Full Stack Developer Intern</strong> at <strong>Spiralytics Inc.</strong> where we use <strong>React, Vue, Laravel, MySQL, and Google Analytics/Ads</strong> as part of the company's tech stack. 
+              </p>
+              <p>
+                Outside of work, I use <strong>Next.js</strong> or the <strong>MERN</strong> stack (MongoDB, Express.js, React.js, and Node.js) with <strong>Tailwind CSS</strong> as my preferred tech stack. I also use <strong>Python</strong> for writing scripts, developing applications, or rapid prototyping with <strong>Flask</strong>.
+              </p>
+              <p>
+                Currently, I am determined to pursue a career in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong> and am actively studying <strong>Python</strong> alongside the libraries and frameworks that accompany it such as <strong>PyTorch</strong> and <strong>Tensorflow</strong> to deepen my knowledge in AI/ML and Data Science.  
+              </p>
+              <p>
+                My interests lie in <strong>model development</strong>, <strong>data analysis</strong>, and <strong>computer vision</strong>. I have experience working with <strong>OpenCV</strong> for image processing and have fine-tuned models like <strong>YOLOv8N</strong> and <strong>BART-Large-CNN</strong>.  
+              </p>
+              <p>
+                In addition to my AI/ML projects, I am also involved in <strong>full-stack development</strong> and enjoy working on both front-end and back-end technologies. My goal is to integrate my development skills with AI to build intelligent applications.  
               </p>
             </div>
-
-            {/* <div>
-              <p>My journey started when I took my OOP Java course in university where I fell in love with java and programming. I then joined a programming competition which <s>helped</s> forced 
-              me to improve on my Data Structures and Algorithms. Today, I'm passionate about creating beautiful websites, like the ones you can find 
-                <span><a href="https://www.darkmodedesign.com/" target='blank' rel='noreferrer' title='darkmodedesign.com' className='hover:text-customGray transition-colors' > <strong>here</strong></a></span>
-              </p>
-            </div> */}
-
-            {/* plan is to create a bento grid of my interests and hobbies and the tech i use */}
-
           </section>
+
         </section>
       </div>
 

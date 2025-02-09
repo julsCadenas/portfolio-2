@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import projects from '../utils/data.js';
 import { motion } from 'framer-motion';
@@ -10,8 +10,13 @@ const fadeInUp = {
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('software');
+    const [filteredProjects, setFilteredProjects] = useState([]);
 
-    const filteredProjects = projects.filter((project) => project.category === selectedCategory);
+    useEffect(() => {
+        setFilteredProjects(projects.filter((project) => project.category === selectedCategory));
+    }, [selectedCategory]); 
+    
+    // const filteredProjects = projects.filter((project) => project.category === selectedCategory);
     // console.log("Filtered Projects:", filteredProjects);
 
     return (
@@ -25,18 +30,11 @@ const Projects = () => {
             >
                 <p className='font-bold text-2xl md:text-3xl'>Projects</p>
                 <p className='font-medium text-lg md:text-xl text-customGray'>A showcase of my works and the skills I've developed over time.</p>
-                <section className='flex gap-3 text-customGray font-medium text-lg md:text-xl pt-1'>
-                    <p  
-                        className={`transition-colors ${selectedCategory === 'software' ? 'text-customWhite font-bold' : 'hover:text-customWhite'}`} 
-                        onClick={() => setSelectedCategory('software')}
-                    >
+                <section className='flex flex-col md:flex-row gap-2 text-customGray font-medium text-lg md:text-xl pt-1'>
+                    <p className={`max-w-72 flex flex-col justify-center items-center transition-colors border-customGray border rounded-xl py-1 px-2 ${selectedCategory === 'software' ? 'text-black font-bold bg-customWhite' : 'hover:text-black hover:bg-customWhite hover:font-bold'}`} onClick={() => setSelectedCategory('software')} >
                         Software Development
                     </p>
-                    <p>|</p>
-                    <p  
-                        className={`transition-colors ${selectedCategory === 'aiml' ? 'text-customWhite font-bold' : 'hover:text-customWhite'}`} 
-                        onClick={() => setSelectedCategory('aiml')}
-                    >
+                    <p className={`max-w-72 flex flex-col justify-center items-center transition-colors border-customGray border rounded-xl py-1 px-2 ${selectedCategory === 'aiml' ? 'text-black font-bold bg-customWhite' : 'hover:text-black hover:bg-customWhite hover:font-bold'}`} onClick={() => setSelectedCategory('aiml')}>
                         Data Science & AI/ML
                     </p>
                 </section>
@@ -47,7 +45,7 @@ const Projects = () => {
                 {filteredProjects.map((project) => (
                     <motion.div 
                         key={project.id} 
-                        className='relative border-[1px] border-customGray rounded-xl group project-card'
+                        className='relative border-[1px] border-customGray rounded-xl group'
                         initial="hidden"
                         whileInView="visible"
                         // viewport={{ once: true }}
