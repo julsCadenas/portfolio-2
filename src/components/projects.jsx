@@ -29,7 +29,7 @@ const Projects = () => {
                 variants={fadeInUp}
             >
                 <p className='font-bold text-2xl md:text-3xl'>Projects</p>
-                <p className='font-medium text-lg md:text-xl text-customGray'>A showcase of my works and the skills I've developed over time.</p>
+                <p className='font-medium text-lg md:text-xl text-customGray mb-1'>A showcase of my works and the skills I've developed over time.</p>
                 <section className='flex flex-col md:flex-row gap-2 text-customGray font-medium text-lg md:text-xl pt-1'>
                     <p className={`max-w-72 flex flex-col justify-center items-center transition-colors border-customGray border rounded-xl py-1 px-2 ${selectedCategory === 'software' ? 'text-black font-bold bg-customWhite' : 'hover:text-black hover:bg-customWhite hover:font-bold'}`} onClick={() => setSelectedCategory('software')} >
                         Software Development
@@ -40,7 +40,7 @@ const Projects = () => {
                 </section>
             </motion.section>
 
-            <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-8">
+            <section className="flex justify-center items-center max-w-7xl px-2 sm:px-0 flex-wrap gap-2 md:gap-3 mt-5">
                 {filteredProjects.length === 0 && <p>No projects found</p>}
                 {filteredProjects.map((project) => (
                     <motion.div 
