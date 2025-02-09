@@ -47,15 +47,15 @@ const Me = () => {
           <section className="flex flex-col gap-8 text-justify">
 
             {/* Introduction */}
-            <div className="text-lg leading-relaxed">
+            <div className="text-lg ">
               <p>Hi! I'm an aspiring <strong>Software & ML Engineer</strong> from FEU Institute of Technology. 🔰</p>
               <p>Currently, I work as a <strong>Full Stack Developer Intern</strong> at <strong>Spiralytics Inc.</strong>, where we use <strong>React, Vue, Laravel, MySQL</strong>, and <strong>Google Analytics/Ads</strong> as part of our tech stack.</p>
             </div>
 
             {/* Tech Stack */}
             <div className="bg-customGray p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-customBlue border-b-2 border-customWhite pb-2">💻 My Preferred Tech Stack</h3>
-              <ul className="list-disc pl-6 leading-relaxed pt-2">
+              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">💻 My Preferred Tech Stack</h3>
+              <ul className="list-disc pl-6  pt-2">
                 <li><strong>Frameworks:</strong> React, Next.js, Tailwind CSS</li>
                 <li><strong>Back-end:</strong> Node.js, Express.js, Flask</li>
                 <li><strong>Databases:</strong> MySQL, MongoDB</li>
@@ -66,7 +66,7 @@ const Me = () => {
 
             {/* Career Goals */}
             <div>
-              <h3 className="text-2xl font-semibold text-customBlue border-b-2 border-customWhite pb-2">🎯 Career Goals</h3>
+              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">🎯 Career Goals</h3>
               <p className="pt-2">
                 I am determined to pursue a career in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>.  
                 Currently, I’m actively studying <strong>Python</strong> along with frameworks like <strong>PyTorch</strong> and <strong>TensorFlow</strong> to deepen my understanding of AI/ML and Data Science.
@@ -75,15 +75,15 @@ const Me = () => {
 
             {/* Project Experience */}
             <div className="bg-customGray p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-customBlue border-b-2 border-customWhite pb-2">🚀 Project Experience</h3>
+              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">🚀 Project Experience</h3>
               <p className='pt-2'>My interests lie in:</p>
-              <ul className="list-disc pl-6 leading-relaxed">
+              <ul className="list-disc pl-6 ">
                 <li><strong>Model Development</strong> – Experimenting with ML models</li>
                 <li><strong>Data Analysis</strong> – Exploring insights with Python</li>
                 <li><strong>Computer Vision</strong> - Image/Video processing</li>
               </ul>
               <p className="pt-3">Some of my AI/ML projects include:</p>
-              <ul className="list-disc pl-6 leading-relaxed">
+              <ul className="list-disc pl-6 ">
                 <li><strong>BART-Large-CNN Summarization Model</strong> – Fine-tuned on Reddit posts</li>
                 <li><strong>PoultryGuard</strong> – AI-powered heat stress monitoring for poultry</li>
                 <li><strong>AI-CLI</strong> – Integrating LLMs into your terminal</li>
@@ -91,7 +91,7 @@ const Me = () => {
             </div>
 
             {/* Final Note */}
-            <div className="text-lg leading-relaxed">
+            <div className="text-lg ">
               <p>
                 My goal is to integrate AI/ML into full-stack development to build intelligent applications.  
                 I'm constantly learning and improving. Let’s connect and build something amazing! 🚀
