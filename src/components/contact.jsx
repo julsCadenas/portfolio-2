@@ -1,8 +1,14 @@
 import Amongus from "../ui/amongus";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import resume from '../assets/Julian-Sebastian-Cadenas-Resume.pdf';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -53,7 +59,7 @@ const Contact = () => {
     };
     
     return (
-        <footer className="text-customWhite bg-black flex flex-col md:flex-row justify-center py-10 border-t-[1px] border-customGray pl-5 md:pl-0" id="contact">
+        <footer className="text-customWhite bg-black flex flex-col md:flex-row justify-center py-10 border-t-[1px] border-customGray pl-5 md:pl-0 bottom-0" id="contact">
             <section className='flex flex-col px-5 md:px-10 text-left'>
                 <p className='font-bold text-2xl md:text-3xl'>Contact Me:</p>
                 <p className='font-medium text-lg md:text-2xl text-customGray'>

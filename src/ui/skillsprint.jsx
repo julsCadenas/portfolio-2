@@ -1,10 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState} from 'react';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const SkillsPrint = ({ title, description, icons }) => {
     const [color, setColor] = useState(null);
-    const ref = useRef(null);
 
     const BootstrapTooltip = styled(({ className, ...props }) => (
         <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -22,37 +27,17 @@ const SkillsPrint = ({ title, description, icons }) => {
         },
     }));
 
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                } else {
-                    entry.target.classList.remove('visible');
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
-
-        if (ref.current) {
-            const elements = ref.current.querySelectorAll('.icon-wrapper, .text-wrapper');
-            elements.forEach(element => observer.observe(element));
-        }
-
-        return () => {
-            if (ref.current) {
-                const elements = ref.current.querySelectorAll('.icon-wrapper, .text-wrapper');
-                elements.forEach(element => observer.unobserve(element));
-            }
-        };
-    }, []);
-
     return (
         <main className="w-full flex justify-center">
-            <div className="w-full max-w-3xl" ref={ref}>
+            <motion.div
+                className="w-full max-w-3xl"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2 }}
+                variants={fadeInUp}
+            >
                 <section className='text-left'>
-                    <div className='text-wrapper px-10 pt-5'>
+                    <div className='px-10 pt-5'>
                         <p className='font-bold text-2xl md:text-3xl'>{title}</p>
                         <p className='font-medium text-lg md:text-xl text-customGray pt-1'>{description}</p>
                     </div>
@@ -61,7 +46,7 @@ const SkillsPrint = ({ title, description, icons }) => {
                     {icons.map((skill, index) => (
                         <div
                             key={index}
-                            className="icon-wrapper flex items-center justify-center"
+                            className="flex items-center justify-center"
                             onMouseEnter={() => setColor(skill.iconClass)}
                             onMouseLeave={() => setColor(null)}
                         >
@@ -71,7 +56,7 @@ const SkillsPrint = ({ title, description, icons }) => {
                         </div>
                     ))}
                 </section>
-            </div>
+            </motion.div>
         </main>
     );
 };

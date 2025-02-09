@@ -67,7 +67,9 @@ const SpecificProj = () => {
                 </figure>
 
                 <section className='fade-in'>
-                    <p className='text-left md:text-justify text-base'>{project.description}</p>
+                    {project.description.map((paragraph, index) => (
+                        <p key={index} className='text-left md:text-justify text-base mb-2'>{paragraph}</p>
+                    ))}
                 </section>
 
                 <section className='flex flex-wrap gap-2 text-sm fade-in'>
@@ -75,6 +77,12 @@ const SpecificProj = () => {
                     <a href={project.link} target='_blank' rel='noreferrer' className='bg-customWhite hover:bg-customGray rounded-lg p-1 px-3 h-10 text-black transition-colors pl-3 flex items-center gap-2'>
                         <span className="material-symbols-outlined">open_in_new</span>
                         Open Website
+                    </a>
+                    }
+                    {project.huggingface &&
+                    <a href={project.link} target='_blank' rel='noreferrer' className='bg-customWhite hover:bg-customGray rounded-lg p-1 px-3 h-10 text-black transition-colors pl-3 flex items-center gap-2'>
+                        <span className="material-symbols-outlined">open_in_new</span>
+                        Hugging Face
                     </a>
                     }
                     <a href={project.repoLink} target='_blank' rel='noreferrer' className='bg-customWhite hover:bg-customGray rounded-lg p-1 px-3 h-10 text-black transition-colors pr-3 flex items-center gap-2'>
