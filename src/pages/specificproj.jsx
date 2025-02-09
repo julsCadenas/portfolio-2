@@ -80,7 +80,7 @@ const SpecificProj = () => {
                     </a>
                     }
                     {project.huggingface &&
-                    <a href={project.link} target='_blank' rel='noreferrer' className='bg-customWhite hover:bg-customGray rounded-lg p-1 px-3 h-10 text-black transition-colors pl-3 flex items-center gap-2'>
+                    <a href={project.huggingface} target='_blank' rel='noreferrer' className='bg-customWhite hover:bg-customGray rounded-lg p-1 px-3 h-10 text-black transition-colors pl-3 flex items-center gap-2'>
                         <span className="material-symbols-outlined">open_in_new</span>
                         Hugging Face
                     </a>

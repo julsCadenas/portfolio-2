@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/header';
 import Contact from '../components/contact';
 import { motion } from 'framer-motion';
@@ -8,9 +8,13 @@ const fadeInUp = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const Me = () => {
+const Terminal = () => {
+  const [commands, setCommands] = useState([]);
+  const [input, setInput] = useState('');
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
+  const inputRef = useRef(null);
+  
   const originalText = "whoami";
 
   useEffect(() => {
@@ -35,88 +39,77 @@ const Me = () => {
     };
   }, []);
 
+  const commandResponses = {
+    whoami: "Julian - Aspiring ML Engineer & Full Stack Developer.",
+    skills: "Python, React, Vue, Node.js, Express, SQL, ML (TensorFlow, PyTorch, Scikit-Learn).",
+    projects: "1. House Price Prediction (ML)\n2. Reddit Summarizer (NLP)\n3. POULTRYGUARD (AI for Poultry Monitoring).",
+    contact: "Email: julian@example.com\nGitHub: github.com/julian\nLinkedIn: linkedin.com/in/julian",
+    help: "Available commands: whoami, skills, projects, contact, clear",
+  };
+
+  const handleCommand = () => {
+    if (input.trim() === "") return;
+
+    if (input === "clear") {
+      setCommands([]);
+    } else {
+      setCommands([...commands, { command: input, response: commandResponses[input] || "Command not found. Type 'help' for available commands." }]);
+    }
+
+    setInput('');
+  };
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [commands]);
+
   return (
-    <main className="bg-black font-poppins min-h-screen flex flex-col">
+    <main className="bg-black text-green-400 font-poppins min-h-screen flex flex-col">
       <Header />
 
-      {/* Main Content */}
-      <motion.div className="min-w-full flex items-center justify-center py-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
+      {/* Terminal Window */}
+      <motion.div className="min-w-full flex items-center justify-center py-20 font-mono"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
       >
-        <section className="text-customWhite flex flex-col justify-center max-w-5xl px-10 gap-10">
-
+        <section className="bg-black p-5 max-w-5xl w-full border border-gray-600 rounded-lg shadow-lg">
+          
           {/* whoami title */}
-          <section className="font-semibold text-3xl md:text-5xl border-b-2 border-customGray pb-3 w-full">
+          <section className="font-semibold text-3xl md:text-5xl border-b-2 border-customGray pb-3 w-full text-white">
             $ {displayText}
             <span className={`cursor ${showCursor ? 'visible' : 'invisible'}`}>|</span>
           </section>
 
-          {/* About Me Section */}
-          <section className="flex flex-col gap-8 text-justify">
+          {/* Display Commands */}
+          <div className="overflow-y-auto h-96 p-2 mt-4">
+            {commands.map((cmd, index) => (
+              <div key={index}>
+                <p className="text-white">$ {cmd.command}</p>
+                <p>{cmd.response}</p>
+              </div>
+            ))}
+          </div>
 
-            {/* Introduction */}
-            <div className="text-lg ">
-              <p>Hi! I'm an aspiring <strong>Software & ML Engineer</strong> from FEU Institute of Technology. 🔰</p>
-              <p>Currently, I work as a <strong>Full Stack Developer Intern</strong> at <strong>Spiralytics Inc.</strong>, where we use <strong>React, Vue, Laravel, MySQL</strong>, and <strong>Google Analytics/Ads</strong> as part of our tech stack.</p>
-            </div>
-
-            {/* Tech Stack */}
-            <div className="bg-customGray p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">💻 My Preferred Tech Stack</h3>
-              <ul className="list-disc pl-6  pt-2">
-                <li><strong>Frameworks:</strong> React, Next.js, Tailwind CSS</li>
-                <li><strong>Back-end:</strong> Node.js, Express.js, Flask</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB</li>
-                <li><strong>Scripting:</strong> Python</li>
-                <li><strong>AI/ML:</strong> Python, TensorFlow, PyTorch, OpenCV</li>
-              </ul>
-            </div>
-
-            {/* Career Goals */}
-            <div>
-              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">🎯 Career Goals</h3>
-              <p className="pt-2">
-                I am determined to pursue a career in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>.  
-                Currently, I’m actively studying <strong>Python</strong> along with frameworks like <strong>PyTorch</strong> and <strong>TensorFlow</strong> to deepen my understanding of AI/ML and Data Science.
-              </p>
-            </div>
-
-            {/* Project Experience */}
-            <div className="bg-customGray p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-customWhite border-b-2 border-customWhite pb-2">🚀 Project Experience</h3>
-              <p className='pt-2'>My interests lie in:</p>
-              <ul className="list-disc pl-6 ">
-                <li><strong>Model Development</strong> – Experimenting with ML models</li>
-                <li><strong>Data Analysis</strong> – Exploring insights with Python</li>
-                <li><strong>Computer Vision</strong> - Image/Video processing</li>
-              </ul>
-              <p className="pt-3">Some of my AI/ML projects include:</p>
-              <ul className="list-disc pl-6 ">
-                <li><strong>BART-Large-CNN Summarization Model</strong> – Fine-tuned on Reddit posts</li>
-                <li><strong>PoultryGuard</strong> – AI-powered heat stress monitoring for poultry</li>
-                <li><strong>AI-CLI</strong> – Integrating LLMs into your terminal</li>
-              </ul>
-            </div>
-
-            {/* Final Note */}
-            <div className="text-lg ">
-              <p>
-                My goal is to integrate AI/ML into full-stack development to build intelligent applications.  
-                I'm constantly learning and improving. Let’s connect and build something amazing! 🚀
-              </p>
-            </div>
-
-          </section>
-
+          {/* Input Line */}
+          <div className="flex mt-2">
+            <span className="text-white">$</span>
+            <input
+              ref={inputRef}
+              type="text"
+              className="bg-black text-green-400 border-none outline-none flex-1 ml-2"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleCommand()}
+            />
+          </div>
         </section>
       </motion.div>
 
       <Contact />
     </main>
   );
-}
+};
 
-export default Me;
+export default Terminal;
