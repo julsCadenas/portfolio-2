@@ -34,10 +34,10 @@ const About = () => {
                     >
                     <p className='pb-5 text-3xl lg:text-5xl '>{name}</p>
                     <p>{bio}</p>
-                    {/* <Link to='/me' className='bg-customWhite hover:bg-customGray rounded-lg mt-5 px-3 h-10 text-black transition-colors flex items-center gap-2 text-xl'>
+                    <Link to='/me' className='bg-customWhite hover:bg-customGray rounded-lg mt-5 px-3 h-10 text-black transition-colors flex items-center gap-2 text-xl'>
                         See More
                         <span className="material-symbols-outlined font-bold">arrow_outward</span>
-                    </Link> */}
+                    </Link>
                 </article>
             </section>
         </div>
