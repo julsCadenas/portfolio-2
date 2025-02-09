@@ -12,7 +12,7 @@ const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('software');
 
     const filteredProjects = projects.filter((project) => project.category === selectedCategory);
-    console.log("Filtered Projects:", filteredProjects);
+    // console.log("Filtered Projects:", filteredProjects);
 
     return (
         <main className="bg-black text-customWhite flex justify-center items-center flex-col pb-20 cursor-pointer" id='projects'>
