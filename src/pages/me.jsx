@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/header';
 import Contact from '../components/contact';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const Me = () => {
   const [displayText, setDisplayText] = useState('');
@@ -34,7 +40,12 @@ const Me = () => {
       <Header />
 
       {/* Main Content */}
-      <div className="min-w-full flex items-center justify-center py-20">
+      <motion.div className="min-w-full flex items-center justify-center py-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+      >
         <section className="text-customWhite flex flex-col justify-center max-w-5xl px-10 gap-10">
 
           {/* whoami title */}
@@ -101,7 +112,7 @@ const Me = () => {
           </section>
 
         </section>
-      </div>
+      </motion.div>
 
       <Contact />
     </main>
