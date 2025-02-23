@@ -1,4 +1,4 @@
-import Amongus from "../ui/amongus";
+import Amongus from "../ui/AmongUs";
 import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';

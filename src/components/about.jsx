@@ -1,6 +1,6 @@
 import myphoto from '../images/myphoto.jpg';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -34,7 +34,7 @@ const About = () => {
                     >
                     <p className='pb-5 text-3xl lg:text-5xl '>{name}</p>
                     <p>{bio}</p>
-                    <Link to='/me' className='bg-customWhite hover:bg-customGray rounded-lg mt-5 px-3 h-10 text-black transition-colors flex items-center gap-2 text-xl'>
+                    <Link to='/about-me' className='bg-customWhite hover:bg-customGray rounded-lg mt-5 px-3 h-10 text-black transition-colors flex items-center gap-2 text-xl'>
                         See More
                         <span className="material-symbols-outlined font-bold">arrow_outward</span>
                     </Link>
