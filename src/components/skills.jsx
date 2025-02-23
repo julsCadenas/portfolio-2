@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillsPrint from '../ui/SkillsPrint';
+import SkillsPrint from '../ui/skillsprint';
 
 const skillIcons = [
     { title: 'Python', iconClass: 'devicon-python-plain', coloredIconClass: 'devicon-python-plain colored' },
