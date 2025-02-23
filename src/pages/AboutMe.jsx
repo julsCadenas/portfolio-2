@@ -1,7 +1,7 @@
 import React from 'react'
 import Terminal from '../components/terminal'
 import Header from '../components/header'
-import Contact from '../components/contact'
+// import Contact from '../components/contact'
 
 const AboutMe = () => {
   return (
