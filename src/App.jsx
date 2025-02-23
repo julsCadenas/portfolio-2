@@ -1,5 +1,5 @@
 import './styles/App.css'
-import Index from './pages/Index'
+import Index from './pages/Index';
 import SpecificProj from './pages/SpecificProj';
 import AboutMe from './pages/AboutMe';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
