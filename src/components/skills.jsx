@@ -26,6 +26,7 @@ const aimlIcons = [
     { title: 'Pandas', iconClass: 'devicon-pandas-plain', coloredIconClass: 'devicon-pandas-plain colored' },
     { title: 'Matplotlib', iconClass: 'devicon-matplotlib-plain', coloredIconClass: 'devicon-matplotlib-plain colored' },
     { title: 'NumPy', iconClass: 'devicon-numpy-plain', coloredIconClass: 'devicon-numpy-plain colored' },
+    { title: 'Scikit-learn', iconClass: 'devicon-scikitlearn-plain', coloredIconClass: 'devicon-scikitlearn-plain colored' },
     { title: 'Tensorflow', iconClass: 'devicon-tensorflow-original', coloredIconClass: 'devicon-tensorflow-original colored' },
     { title: 'PyTorch', iconClass: 'devicon-pytorch-original', coloredIconClass: 'devicon-pytorch-original colored' },
 ];
