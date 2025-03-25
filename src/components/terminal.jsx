@@ -67,15 +67,19 @@ const Terminal = () => {
                     }
                 }
                 break;
-            case "cat":
-                if (!arg) {
-                    response = <span className="text-red-400">"Usage: cat &lt;filename&gt;"</span>;
-                } else {
-                    const dir = getCurrentDirectory();
-                    response = dir[arg] ? (
-                        <pre className="whitespace-pre-wrap text-white">{dir[arg]}</pre>
-                    ) : <span className="text-red-400">{`No such file: ${arg}`}</span>;
-                }
+                case "cat":
+                    if (!arg) {
+                        response = <span className="text-red-400">"Usage: cat &lt;filename&gt;"</span>;
+                    } else {
+                        const dir = getCurrentDirectory();
+                        if (!dir[arg]) {
+                            response = <span className="text-red-400">{`No such file: ${arg}`}</span>;
+                        } else if (typeof dir[arg] === "object") {
+                            response = <span className="text-red-400">{`${arg} is a directory.`}</span>;
+                        } else {
+                            response = <pre className="whitespace-pre-wrap text-white">{dir[arg]}</pre>;
+                        }
+                    }
                 break;
             default:
                 response = <span className="text-red-400">{`Command not found: ${cmd}`}</span>;
