@@ -4,6 +4,7 @@ import SkillsPrint from '../ui/skillsprint';
 const skillIcons = [
     { title: 'Python', iconClass: 'devicon-python-plain', coloredIconClass: 'devicon-python-plain colored' },
     { title: 'JavaScript', iconClass: 'devicon-javascript-plain', coloredIconClass: 'devicon-javascript-plain colored' },
+    { title: 'TypeScript', iconClass: 'devicon-typescript-plain', coloredIconClass: 'devicon-typescript-plain colored' },
     { title: 'Java', iconClass: 'devicon-java-plain', coloredIconClass: 'devicon-java-plain colored' },
     { title: 'C++', iconClass: 'devicon-cplusplus-plain', coloredIconClass: 'devicon-cplusplus-plain colored' },
     { title: 'HTML5', iconClass: 'devicon-html5-plain', coloredIconClass: 'devicon-html5-plain colored' },
@@ -16,6 +17,7 @@ const frameworkIcons = [
     { title: 'Next JS', iconClass: 'devicon-nextjs-plain', coloredIconClass: 'devicon-nextjs-original-wordmark' },
     { title: 'Node JS', iconClass: 'devicon-nodejs-plain', coloredIconClass: 'devicon-nodejs-plain colored' },
     { title: 'Express JS', iconClass: 'devicon-express-original', coloredIconClass: 'devicon-express-original colored' },
+    { title: 'Flask', iconClass: 'devicon-flask-original', coloredIconClass: 'devicon-flask-original-wordmark' },
     { title: 'Tailwind', iconClass: 'devicon-tailwindcss-original', coloredIconClass: 'devicon-tailwindcss-original colored' },
     { title: 'OpenCV', iconClass: 'devicon-opencv-plain', coloredIconClass: 'devicon-opencv-plain colored' },
     // { title: 'Arduino', iconClass: 'devicon-arduino-plain', coloredIconClass: 'devicon-arduino-plain colored' },
@@ -34,7 +36,9 @@ const aimlIcons = [
 const toolsIcons = [
     { title: 'SQL', iconClass: 'devicon-sqldeveloper-plain', coloredIconClass: 'devicon-sqldeveloper-plain colored' },
     { title: 'SQLite', iconClass: 'devicon-sqlite-plain', coloredIconClass: 'devicon-sqlite-plain colored' },
+    { title: 'PostgreSQL', iconClass: 'devicon-postgresql-plain', coloredIconClass: 'devicon-postgresql-plain colored' },
     { title: 'MongoDB', iconClass: 'devicon-mongodb-plain', coloredIconClass: 'devicon-mongodb-plain colored' },
+    { title: 'Prisma', iconClass: 'devicon-prisma-original', coloredIconClass: 'devicon-prisma-original-wordmark' },
     { title: 'Firebase', iconClass: 'devicon-firebase-plain', coloredIconClass: 'devicon-firebase-plain colored' },
     { title: 'Bash', iconClass: 'devicon-bash-plain', coloredIconClass: 'devicon-bash-plain colored' },
     { title: 'Git', iconClass: 'devicon-git-plain', coloredIconClass: 'devicon-git-plain colored' },
