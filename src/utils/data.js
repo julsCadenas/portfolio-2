@@ -11,6 +11,7 @@ import reddit from '../images/reddit-summarize.png'
 import poultryguard from '../images/poultryguard.png'
 import aicli from '../images/aicli.png'
 import dsaiml from '../images/dsaiml.png'
+import stock from '../images/stock-predict.png'
 
 const projects = [
     {
@@ -203,6 +204,22 @@ const projects = [
             "Each project explores key ML concepts, including regression, decision trees, classification, NLP, deep learning, feature engineering, model evaluation, and interpretability.",
             "The projects follow a progressive learning approach, integrating best practices in model building, optimization, and explainability.",
             "Status: Ongoing."
+        ]
+    },
+    {
+        id: '14',
+        category: 'aiml',
+        title: 'Stock Price Predictor with News Sentiment',
+        repoLink: 'https://github.com/julsCadenas/stock-price-predictor',
+        image: stock,
+        alt: 'Stock Price Predictor with News Sentiment',  
+        stack: ['Python', 'TensorFlow', 'Scikit-learn', 'Hugging Face Transformers', 'Machine Learning'],
+        subtitle: 'Predicting AAPL stock prices using GRU and News Sentiment Analysis',
+        description: [
+            "Built a deep learning model to predict Apple (AAPL) stock prices by combining 3 years of historical price data with news sentiment analysis using GRU and LSTM networks.",
+            "Performed sentiment analysis on real-world news headlines using Hugging Face Transformers (siebert/sentiment-roberta-large-english) and merged the scores with stock features for time-series forecasting.",
+            "Achieved significant improvement with GRU: Test R² of 0.9338, RMSE of 4.53, MAE of 3.50, and MAPE of 1.60%, outperforming the LSTM baseline.",
+            "Followed end-to-end ML workflow: data collection, preprocessing, feature engineering, model development, hyperparameter tuning, and evaluation with explainable metrics."
         ]
     },
     
