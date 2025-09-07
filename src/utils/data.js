@@ -12,6 +12,8 @@ import poultryguard from '../images/poultryguard.png'
 import aicli from '../images/aicli.png'
 import dsaiml from '../images/dsaiml.png'
 import stock from '../images/stock-predict.png'
+import valentine from '../images/valentine.png'
+import kitawise from '../images/kitawise.png'
 
 const projects = [
     {
@@ -220,6 +222,36 @@ const projects = [
             "Performed sentiment analysis on real-world news headlines using Hugging Face Transformers (siebert/sentiment-roberta-large-english) and merged the scores with stock features for time-series forecasting.",
             "Achieved significant improvement with GRU: Test R² of 0.9338, RMSE of 4.53, MAE of 3.50, and MAPE of 1.60%, outperforming the LSTM baseline.",
             "Followed end-to-end ML workflow: data collection, preprocessing, feature engineering, model development, hyperparameter tuning, and evaluation with explainable metrics."
+        ]
+    },
+    {
+        id: '15',
+        category: 'software',
+        title: "Valentine's CLI",
+        repoLink: 'https://github.com/julsCadenas/valentine-cli',
+        image: valentine,
+        alt: "Valentine's CLI",  
+        stack: ['Next JS', 'Tailwind CSS'],
+        subtitle: 'A Fun Terminal-Like Website for Your Date!',
+        description: [
+            "Want to impress your valentine with a techy surprise? This CLI-inspired website lets you send a cool, interactive terminal-like experience.",
+            "Features a fully interactive CLI-style interface and allows customization by adding a name at the end of the URL: https://valentinecli.vercel.app/desired_name_here",
+        ]
+    },
+    {
+        id: '16',
+        category: 'software',
+        title: "Kitawise Finance-flow",
+        repoLink: 'https://github.com/julsCadenas/kitawise-finance-flow',
+        image: kitawise,
+        alt: "Kitawise Finance-flow",  
+        stack: ['Typescript', 'React', 'Tailwind', 'Node', 'Express', 'MongoDB', 'ShadCN', 'OAuth2', 'LLAMA 2'],
+        subtitle: 'Personal financial goal tracking MVP built for a hackathon.',
+        description: [
+            "Kitawise is a personal financial goal tracking web application designed to help freelancers, entrepreneurs, and individuals manage savings, income targets, and investments effectively.",
+            "Users can create, edit, and track progress toward financial goals with visual insights and smart recommendations.",
+            "Features include: adding/managing multiple goals, visual progress tracking, deadline/time remaining insights, weekly saving recommendations, goal categorization, and data persistence via backend API (MongoDB + Express).",
+            "Note: This project was developed as an MVP during a hackathon, so it demonstrates core functionality and features."
         ]
     },
     
